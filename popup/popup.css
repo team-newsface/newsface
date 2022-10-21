@@ -196,13 +196,6 @@
     align-items: center;
 }
 
-.licenseIcon {
-    background: url('../logo/book-line.svg');
-    width: 13px;
-    height: 13px;
-    background-size: cover;
-}
-
 .leftWrap {
     position: absolute;
     left: 6px;
