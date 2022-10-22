@@ -25,7 +25,7 @@
 
 /* 이미지 로고 */
 .logo {
-    background-image: url('../logo/newsface.svg');
+    background-image: url('../logo/newsface.png');
     background-size: cover;
     width: 53px;
     height: 55px;
