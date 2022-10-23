@@ -4,6 +4,13 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'PyeongChangPeace-Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-02@1.0/PyeongChangPeace-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -16,6 +23,14 @@ span,
 p,
 li {
     transform: rotate(0.04deg);
+}
+
+a,
+a:link,
+a:visited {
+    color: #8C8C8C;
+    text-decoration: none;
+    cursor: pointer;
 }
 
 /* 전체 크기 설정 */
@@ -57,6 +72,10 @@ li {
     align-items: center;
 }
 
+#textLogo {
+    color: #DCDCDC;
+    font-family: PyeongChangPeace-Bold;
+}
 
 /* 슬라이더는 외부 스타일시트(slider.css)로 이동 */
 
@@ -139,13 +158,14 @@ li {
     justify-content: center;
     font-weight: 450;
     font-size: 16px;
+    color: #DCDCDC;
 }
 
 .tabWeather {
     width: 67%;
     height: 100%;
-    background: #288BFF;
-
+    background-image: url("https://picsum.photos/262/50/?blur=3");
+    backdrop-filter: blur(2px);
 }
 
 .tabWeatherContent {
