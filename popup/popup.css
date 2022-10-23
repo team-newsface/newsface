@@ -1,7 +1,13 @@
+@font-face {
+    font-family: 'MonoplexKR';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_Monoplex-kr@1.0/MonoplexKR-Regular.woff2') format('woff2');
+    font-style: normal;
+}
+
 * {
     margin: 0;
     padding: 0;
-    font-family: 'Inter';
+    font-family: 'MonoplexKR';
     cursor: default;
 }
 
@@ -25,7 +31,7 @@
 
 /* 이미지 로고 */
 .logo {
-    background-image: url('../logo/newsface.png');
+    background-image: url('../imgs/newsface.png');
     background-size: cover;
     width: 53px;
     height: 55px;
@@ -44,6 +50,7 @@
     display: flex;
     align-items: center;
 }
+
 
 /* 슬라이더는 외부 스타일시트(slider.css)로 이동 */
 
@@ -121,14 +128,54 @@
 
 .tabNamuText {
     display: flex;
-    margin-top: 10%;
+    /* padding-top: 10%; */
+    padding-top: 16px;
     justify-content: center;
+    font-weight: 450;
+    font-size: 16px;
 }
 
 .tabWeather {
     width: 67%;
     height: 100%;
     background: #288BFF;
+
+}
+
+.tabWeatherContent {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 50px;
+
+}
+
+.howRain,
+.locDeg {
+    display: flex;
+    align-items: center;
+}
+
+.degree,
+.rainPerContentText {
+    font-weight: 700;
+    font-size: 30px;
+}
+
+.location,
+.rainPerText {
+    font-weight: 700;
+    font-size: 12px;
+    margin-right: 3px;
+}
+
+.cloudSun {
+    background-image: url("/imgs/cloudSun.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 30px;
+
 }
 
 .analysis {
@@ -176,8 +223,12 @@
     font-size: 12px;
 }
 
+.chartNum {
+    font-weight: 600;
+}
+
 .newTab {
-    background: url('../logo/new_tab.svg');
+    background: url('../imgs/new_tab.svg');
     background-size: cover;
     width: 14px;
     height: 14px;
