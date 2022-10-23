@@ -11,6 +11,12 @@
     cursor: default;
 }
 
+/* 안티엘리어싱 */
+span,
+p,
+li {
+    transform: rotate(0.04deg);
+}
 
 /* 전체 크기 설정 */
 .wrap {
