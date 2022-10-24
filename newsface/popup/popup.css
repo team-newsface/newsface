@@ -1,0 +1,287 @@
+@font-face {
+    font-family: 'MonoplexKR';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_Monoplex-kr@1.0/MonoplexKR-Regular.woff2') format('woff2');
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'PyeongChangPeace-Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-02@1.0/PyeongChangPeace-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'MonoplexKR';
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* 안티엘리어싱 */
+span,
+p,
+li {
+    transform: rotate(0.04deg);
+}
+
+a,
+a:link,
+a:visited {
+    color: #8C8C8C;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* 전체 크기 설정 */
+.wrap {
+    width: 390px;
+    height: 360px;
+}
+
+
+/* 헤더 전체 설정 */
+.header {
+    width: 100%;
+    height: 20%;
+    background-color: #333;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+/* 이미지 로고 */
+.logo {
+    background-image: url('../imgs/newsface.png');
+    background-size: cover;
+    width: 53px;
+    height: 55px;
+    position: relative;
+    left: 6%;
+}
+
+/* 텍스트 로고 */
+.textLogo {
+    font-size: 30px;
+    font-weight: 900;
+    font-family: PyeongChangPeace-Bold;
+    height: 100%;
+    color: #DCDCDC;
+    position: absolute;
+    left: 84px;
+    display: flex;
+    align-items: center;
+}
+
+.textLogo:hover {
+    cursor: pointer;
+}
+
+/* 슬라이더는 외부 스타일시트(toggle.css)로 이동 */
+
+/* 스크롤 */
+
+.marquee {
+    width: 100%;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    background: #000;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.marquee div {
+    padding-left: 100%;
+    display: inline-block;
+    animation: animate 15s linear infinite;
+}
+
+.marquee div:hover {
+    animation-play-state: paused;
+}
+
+.marquee div a {
+    margin: 0 25px;
+}
+
+@keyframes animate {
+    100% {
+        transform: translate3d(-100%, 0, 0);
+    }
+}
+
+/* 메인 설정 */
+.main {
+    width: 100%;
+    height: 80%;
+    background-color: #555;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+/* 메인 텍스트 */
+.mainTab {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+}
+
+.tabNamu {
+    width: 33%;
+    height: 100%;
+    background-color: #333333;
+}
+
+.tabNamuText {
+    display: flex;
+    /* padding-top: 10%; */
+    padding-top: 16px;
+    justify-content: center;
+    font-weight: 450;
+    font-size: 16px;
+    color: #DCDCDC;
+}
+
+.tabWeather {
+    width: 67%;
+    height: 100%;
+    /* background-image: url("https://picsum.photos/262/50/?blur=3"); */
+}
+
+.tabWeatherContent {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 50px;
+
+}
+
+.howRain,
+.locDeg {
+    display: flex;
+    align-items: center;
+}
+
+.degree,
+.rainPerContentText {
+    font-weight: 700;
+    font-size: 30px;
+}
+
+.location,
+.rainPerText {
+    font-weight: 700;
+    font-size: 12px;
+    margin-right: 3px;
+}
+
+.cloudSun {
+    background-image: url("/imgs/cloudSun.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 30px;
+
+}
+
+.analysis {
+    font-weight: 700;
+}
+
+
+/* 차트 설정 */
+/*
+.chart {
+    width: 350px;
+    height: 200px;
+    position: absolute;
+    top: 50px;
+}
+
+.chart>ul {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+.chart>ul>li {
+    list-style: none;
+    width: 50%;
+    height: 20%;
+    display: flex;
+    align-items: center;
+    position: relative;
+    transition: .2s;
+}
+
+.chart>ul>li:hover {
+    background-color: #333;
+}
+
+.chartCtn {
+    position: absolute;
+    left: 10px;
+    color: #DCDCDC;
+    font-size: 12px;
+}
+
+.chartNum {
+    font-weight: 600;
+}
+
+.newTab {
+    background: url('../imgs/new_tab.svg');
+    background-size: cover;
+    width: 14px;
+    height: 14px;
+    position: absolute;
+    right: 10px;
+    cursor: pointer;
+}
+*/
+
+/* 맨 밑 텍스트 */
+.license {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 26px;
+    display: flex;
+    align-items: center;
+}
+
+.license span {
+    font-size: 12px;
+    color: #8C8C8C;
+    margin: 0 3px;
+    display: flex;
+    align-items: center;
+}
+
+.leftWrap {
+    position: absolute;
+    left: 6px;
+    display: flex;
+    align-items: center;
+}
+
+.version {
+    position: absolute;
+    right: 6px;
+}
