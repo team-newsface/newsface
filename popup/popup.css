@@ -1,295 +1,113 @@
 @font-face {
-    font-family: 'MonoplexKR';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_Monoplex-kr@1.0/MonoplexKR-Regular.woff2') format('woff2');
-    font-style: normal;
-}
-
-@font-face {
     font-family: 'PyeongChangPeace-Bold';
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-02@1.0/PyeongChangPeace-Bold.woff2') format('woff2');
     font-weight: 700;
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'PyeongChangPeace-Light';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-02@1.0/PyeongChangPeace-Light.woff2') format('woff2');
+    font-weight: 300;
+    font-style: normal;
+}
+
+body {
+    width: 320px;
+    height: 600px;
+}
+
+.wrap {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #131313;
+    font-weight: 300;
+    color: #DCDCDC;
+}
+
 * {
     margin: 0;
     padding: 0;
-    font-family: 'MonoplexKR';
     cursor: default;
+    font-family: PyeongChangPeace-Light;
 }
 
-/* 안티엘리어싱 */
-span,
-p,
-li {
-    transform: rotate(0.04deg);
+header {
+    margin-top: 11px;
+    width: 256px;
+    height: 48px;
+    margin-right: auto;
+    margin-left: auto;
 }
 
-a,
-a:link,
-a:visited {
-    color: #8C8C8C;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-/* 전체 크기 설정 */
-.wrap {
-    width: 390px;
-    height: 360px;
-}
-
-
-/* 헤더 전체 설정 */
-.header {
-    width: 100%;
-    height: 20%;
-    background-color: #333;
+.hdCtn {
     display: flex;
+    justify-content: space-around;
     align-items: center;
-    position: relative;
 }
 
-/* 이미지 로고 */
 .logo {
-    background-image: url('../imgs/newsface.png');
+    width: 42px;
+    height: 44px;
+    background-image: url("../static/newsface.png");
     background-size: cover;
-    width: 53px;
-    height: 55px;
-    position: relative;
-    left: 6%;
 }
 
-/* 텍스트 로고 */
 .textLogo {
-    font-size: 30px;
-    font-weight: 900;
-    height: 100%;
-    color: #DCDCDC;
-    position: absolute;
-    left: 84px;
-    display: flex;
-    align-items: center;
-}
-
-#textLogo {
-    color: #DCDCDC;
     font-family: PyeongChangPeace-Bold;
-}
-
-/* 슬라이더는 외부 스타일시트(slider.css)로 이동 */
-
-/* 스크롤 */
-.roll {
-    width: 100%;
-    height: 25px;
-    background-color: #000;
-    display: flex;
-    align-items: center;
-}
-
-/* 미완성 스크롤
-.roll>ul {
-    display: flex;
-    width: 100%;
-    height: 100%;
-    list-style: none;
-    justify-content: space-around;
-    position: relative;
-    overflow: hidden;
-    white-space: nowrap;
-}
-
-.roll>ul>li {
-    color: #fff;
-    padding: 0 56px;
-    font-size: 12px;
-    display: inline-block;
-    width: 300px;
-
-    animation: roll 4s linear infinite;
-}
-
-.roll>ul>li:hover {
-    animation-play-state: paused;
-}
-
-@keyframes roll {
-    0% {
-        transform: translate(0%);
-    }
-
-    100% {
-        transform: translate(-100%);
-    }
-} */
-
-
-/* 메인 설정 */
-.main {
-    width: 100%;
-    height: 80%;
-    background-color: #555;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
-}
-
-/* 메인 텍스트 */
-.mainTab {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    width: 100%;
-    height: 50px;
-}
-
-.tabNamu {
-    width: 33%;
-    height: 100%;
-    background-color: #333333;
-}
-
-.tabNamuText {
-    display: flex;
-    /* padding-top: 10%; */
-    padding-top: 16px;
-    justify-content: center;
-    font-weight: 450;
-    font-size: 16px;
+    font-weight: 700;
     color: #DCDCDC;
+    font-size: 24px;
 }
 
-.tabWeather {
-    width: 67%;
-    height: 100%;
-    background-image: url("https://picsum.photos/262/50/?blur=3");
-    backdrop-filter: blur(2px);
-}
-
-.tabWeatherCtn {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    height: 50px;
-
-}
-
-.howRain,
-.locDeg {
-    display: flex;
-    align-items: center;
-}
-
-.degree,
-.rainPerContentText {
-    font-weight: 700;
-    font-size: 30px;
-}
-
-.location,
-.rainPerText {
-    font-weight: 700;
-    font-size: 12px;
-    margin-right: 3px;
-}
-
-.cloudSun {
-    background-image: url("/imgs/cloudSun.svg");
-    background-size: contain;
-    background-repeat: no-repeat;
-    width: 30px;
-    height: 30px;
-
-}
-
-.analysis {
-    font-weight: 700;
-}
-
-
-/* 차트 설정 */
-.chart {
-    width: 350px;
-    height: 200px;
-    /* background-color: #355; */
-    position: absolute;
-    top: 50px;
-}
-
-.chart>ul {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    width: 100%;
-    height: 100%;
-}
-
-.chart>ul>li {
-    list-style: none;
-    width: 50%;
-    height: 20%;
-    /* background-color: #fff; */
-    display: flex;
-    align-items: center;
-    position: relative;
-    /* outline: 1px solid white; */
-    transition: .2s;
-}
-
-.chart>ul>li:hover {
-    background-color: #333;
-}
-
-.chartCtn {
-    position: absolute;
-    left: 10px;
-    color: #DCDCDC;
-    font-size: 12px;
-}
-
-.chartNum {
-    font-weight: 600;
-}
-
-.newTab {
-    background: url('../imgs/new_tab.svg');
+.switch {
+    width: 36px;
+    height: 16px;
+    background-image: url("../static/toggle.png");
     background-size: cover;
-    width: 14px;
-    height: 14px;
-    position: absolute;
-    right: 10px;
+}
+
+.tabs {
+    margin-top: 7px;
+    overflow: hidden;
+    width: 256px;
+    display: flex;
+    justify-content: center;
+}
+
+.tabCtn {
+    background-color: #acacac;
+    border-radius: 10px;
+}
+
+.tabs button {
+    width: 114px;
+    background-color: #acacac;
+    height: 36px;
+    border: none;
+    outline: none;
     cursor: pointer;
+    padding: 10px 16px;
+    transition: 0.3s;
+    border-radius: 10px;
 }
 
+.tabs button:hover {
+    color: #747474;
+}
 
-/* 맨 밑 텍스트 */
-.license {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 26px;
+.tabs button.active {
+    background-color: #DCDCDC;
+}
+
+.tabcontent {
+    margin-top: 22px;
+    display: none;
+}
+
+.ctChart {
     display: flex;
-    align-items: center;
-}
-
-.license span {
-    font-size: 12px;
-    color: #8C8C8C;
-    margin: 0 3px;
-    display: flex;
-    align-items: center;
-}
-
-.leftWrap {
-    position: absolute;
-    left: 6px;
-    display: flex;
-    align-items: center;
-}
-
-.version {
-    position: absolute;
-    right: 6px;
 }

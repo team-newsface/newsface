@@ -1,69 +1,75 @@
-* {
-    margin: 0;
-    padding: 0;
-}
-
-/* 스위치 전체 그룹 */
-.switchWrap {
-    position: absolute;
-    left: 77%;
-}
-
-/* 스위치 전체 설정 */
-.switch {
-    position: relative;
-    display: inline-block;
-    width: 60px;
-    height: 34px;
-}
-
-/* HTML 기본 체크박스 투명화 */
-.switch input {
-    opacity: 0;
-    width: 0;
-    height: 0;
-}
-
-/* 슬라이더 설정 */
-.slider {
-    position: absolute;
+label {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
     cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgb(255, 255, 255);
-    transition: .4s;
 }
 
-.slider:before {
-    position: absolute;
+[type="checkbox"] {
+    margin-top: 8px;
+    appearance: none;
+    position: relative;
+    border: max(2px, 0.1em) solid gray;
+    border-radius: 1.25em;
+    width: 2.25em;
+    height: 1.25em;
+}
+
+[type="checkbox"]::before {
     content: "";
-    height: 26px;
-    width: 26px;
-    left: 4px;
-    bottom: 4px;
-    background-color: black;
-    transition: .4s;
-}
-
-input:checked+.slider {
-    background-color: black;
-}
-
-input:checked+.slider:before {
-    background-color: #fff;
-}
-
-input:checked+.slider:before {
-    transform: translateX(26px);
-}
-
-/* 슬라이더 테두리 둥글게 */
-.slider.round {
-    border-radius: 34px;
-}
-
-.slider.round:before {
+    position: absolute;
+    left: 0;
+    width: 1em;
+    height: 1em;
     border-radius: 50%;
+    transform: scale(0.8);
+    background-color: gray;
+    transition: left 250ms linear;
+}
+
+[type="checkbox"]:checked {
+    background-color: tomato;
+    border-color: tomato;
+}
+
+[type="checkbox"]:checked::before {
+    background-color: white;
+    left: 1em;
+}
+
+[type="checkbox"]:disabled {
+    border-color: lightgray;
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+[type="checkbox"]:disabled:before {
+    background-color: lightgray;
+}
+
+[type="checkbox"]:disabled+span {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+[type="checkbox"]:focus-visible {
+    outline-offset: max(2px, 0.1em);
+    outline: max(2px, 0.1em) solid tomato;
+}
+
+[type="checkbox"]:enabled:hover {
+    box-shadow: 0 0 0 max(4px, 0.2em) lightgray;
+}
+
+fieldset {
+    border: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+*::before,
+*::after {
+    box-sizing: border-box;
 }

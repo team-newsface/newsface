@@ -1,143 +1,43 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
     <link rel="stylesheet" href="./popup.css">
     <link rel="stylesheet" href="./toggle.css">
-    <script src="./jquery-3.6.0.min.js" defer></script>
-    <script src="./popup.js" defer></script>
+    <link rel="stylesheet" href="./chartCanvas.css">
 </head>
 
 <body>
     <div class="wrap">
-        <div class="header">
-            <div class="logo"></div>
-            <div class="textLogo">
-                <a href="" id="textLogo">
-                    NEWSFACE
-                </a>
+        <header>
+            <div class="hdCtn">
+                <div class="logo"></div>
+                <div class="textLogo">NEWSFACE</div>
+                <fieldset>
+                    <label>
+                        <input id="chartCheckbox" type="checkbox" checked />
+                    </label>
             </div>
-            <div class="switchWrap">
-                <label class="switch">
-                    <input type="checkbox">
-                    <span class="slider round"></span>
-                </label>
+        </header>
+        <div class="mainCtn">
+            <div class="ctTitle">
+                <div class="ctTitleText">정치</div>
             </div>
-
-        </div>
-        <div class="roll">
-            <!-- <ul>
-                <li>"대장동 이슈는 호재" 이재명, 지금도 '동그라미'?</li>
-                <li>윤 대통령, 경찰 향해 "국민 안전은 '자유'의 기본바탕"
-                </li>
-                <li>윤 대통령 지지율 27%... 민주당사 압수수색에 중도층 7%p↓
-                </li>
-                <li>트러스 후임에 리시 수낵 가장 유럭…모돈트·존슨 등도 하마평
-                </li>
-                <li>"머스크, 트위터 직원 4명 중 3명 자를 것"
-                </li>
-                <li>'제빵공장 사망사고' 허영인 SPC 회장, 대국민사과…"1000억 투입해 안전강화"[종합]
-                </li>
-                <li>ggggggggggg</li>
-                <li>hhhhhhhhhh</li>
-                <li>iiiiiiiiii</li>
-                <li>jjjjjjjjjj</li>
-                <li>kkkkkkkkkkk</li>
-                <li>llllllll</li>
-                <li>nnnn</li>
-                <li>mmmmmm</li>
-                <li>oooooooooo</li>
-            </ul> -->
-
-        </div>
-        <div class="main">
-            <div class="mainTab">
-                <!-- <span class="textCtn">여태까지 분석 된 댓글: </span><span class="analysis">3,000</span> -->
-                <div class="tabNamu">
-                    <p class="tabNamuText">나무위키</p>
-                </div>
-                <div class="tabWeather">
-                    <div class="tabWeatherCtn">
-                        <div class="locDeg">
-                            <span class="location">서울</span>
-                            <span class="degree">32°</span>
-                        </div>
-                        <div class="howRain">
-                            <span class="rainPerText">강수<br>확률</span>
-                            <span class="rainPerContentText">12%</span>
-                        </div>
-                        <div class="cloudSun"></div>
-                    </div>
-                </div>
+            <div class="chartContainer">
+                <canvas id="ctChart"></canvas>
             </div>
-
-            <div class="chart">
-                <ul>
-                    <li>
-                        <span class="chartCtn"><span class="chartNum">1.</span> ㅁㅁㅁ</span>
-                        <span class="newTab"></span>
-                    </li>
-                    <li>
-                        <span class="chartCtn"><span class="chartNum">2.</span> ㅁㅁㅁ</span>
-                        <span class="newTab"></span>
-                    </li>
-                    <li>
-                        <span class="chartCtn"><span class="chartNum">3.</span> ㅁㅁㅁ</span>
-                        <span class="newTab"></span>
-                    </li>
-                    <li>
-                        <span class="chartCtn"><span class="chartNum">4.</span> ㅁㅁㅁ</span>
-                        <span class="newTab"></span>
-                    </li>
-                    <li>
-                        <span class="chartCtn"><span class="chartNum">5.</span> ㅁㅁㅁ</span>
-                        <span class="newTab"></span>
-                    </li>
-                    <li>
-                        <span class="chartCtn"><span class="chartNum">6.</span> ㅁㅁㅁ</span>
-                        <span class="newTab"></span>
-                    </li>
-                    <li>
-                        <span class="chartCtn"><span class="chartNum">7.</span> ㅁㅁㅁ</span>
-                        <span class="newTab"></span>
-                    </li>
-                    <li>
-                        <span class="chartCtn"><span class="chartNum">8.</span> ㅁㅁㅁ</span>
-                        <span class="newTab"></span>
-                    </li>
-                    <li>
-                        <span class="chartCtn"><span class="chartNum">9.</span> ㅁㅁㅁ</span>
-                        <span class="newTab"></span>
-                    </li>
-                    <li>
-                        <span class="chartCtn"><span class="chartNum">10.</span> ㅁㅁㅁ</span>
-                        <span class="newTab"></span>
-                    </li>
+            <div class="chartDesContainer">
+                <ul class="eachPersChart">
+                    <li>70%</li>
+                    <li>25%</li>
+                    <li>5%</li>
                 </ul>
-            </div>
-
-            <div class="license">
-                <div class="leftWrap">
-                    <span>
-                        <a href="">개인정보처리방침</a>
-                    </span>
-                    <span>
-                        <a href="">open source license</a>
-                    </span>
-
-                </div>
-                <span class="version">
-                    <a href="">
-                        v1.0.0
-                    </a>
-                </span>
+                <div class="chartDes">70%의 여론이 긍정적이에요!</div>
             </div>
         </div>
     </div>
+    <script src="../scripts/chartCheckbox.js"></script>
+    <script src="../scripts/chart.min.js" type="module"></script>
+    <script src="../scripts/ctPopupChart.js" type="module"></script>
 </body>
-
-</html>
