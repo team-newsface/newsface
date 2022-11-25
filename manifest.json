@@ -1,7 +1,7 @@
 {
     "manifest_version": 3,
     "name": "newsface",
-    "version": "2.0.0",
+    "version": "2.1.0",
     "description": "브라우저 확장 프로그램인 ‘뉴스페이스’는 사용자에게 실시간 검색어와 네이버 뉴스 댓글의 여론 통계를 알려주는 서비스입니다. 포털사이트에서 제공하는 정보 외에 추가적으로 확인이 필요한 내용들을 쉽고 빠르게 파악할 수 있어 편리합니다.",
     "permissions": [
         "contextMenus"
