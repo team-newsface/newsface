@@ -111,3 +111,20 @@ header {
 .ctChart {
     display: flex;
 }
+
+.rankingsContainer {
+    width: 216px;
+    height: 210px;
+    display: flex;
+    justify-content: center;
+    font-size: 13px;
+    margin-top: 3%;
+}
+
+ol>li:hover {
+    background-color: #575757;
+}
+
+ol>li {
+    margin-bottom: 5%;
+}
