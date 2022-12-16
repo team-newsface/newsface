@@ -21,16 +21,47 @@ fetch(url)
             //     console.log((index + 1) + data.rankings[index])
             // }
             ranking_one.innerText = `${data.rankings[0]}`;
+            ranking_one.addEventListener('click', function () {
+                window.open('https://search.naver.com/search.naver?where=nexearch&sm=top_hty&fbm=1&ie=utf8&query=' + `${data.rankings[0]}`)
+            });
             ranking_two.innerText = `${data.rankings[1]}`;
+            ranking_two.addEventListener('click', function () {
+                window.open('https://search.naver.com/search.naver?where=nexearch&sm=top_hty&fbm=1&ie=utf8&query=' + `${data.rankings[1]}`)
+            });
             ranking_three.innerText = `${data.rankings[2]}`;
+            ranking_three.addEventListener('click', function () {
+                window.open('https://search.naver.com/search.naver?where=nexearch&sm=top_hty&fbm=1&ie=utf8&query=' + `${data.rankings[2]}`)
+            });
             ranking_four.innerText = `${data.rankings[3]}`;
+            ranking_four.addEventListener('click', function () {
+                window.open('https://search.naver.com/search.naver?where=nexearch&sm=top_hty&fbm=1&ie=utf8&query=' + `${data.rankings[3]}`)
+            });
             ranking_five.innerText = `${data.rankings[4]}`;
+            ranking_five.addEventListener('click', function () {
+                window.open('https://search.naver.com/search.naver?where=nexearch&sm=top_hty&fbm=1&ie=utf8&query=' + `${data.rankings[4]}`)
+            });
             ranking_six.innerText = `${data.rankings[5]}`;
+            ranking_six.addEventListener('click', function () {
+                window.open('https://search.naver.com/search.naver?where=nexearch&sm=top_hty&fbm=1&ie=utf8&query=' + `${data.rankings[5]}`)
+            });
             ranking_seven.innerText = `${data.rankings[6]}`;
+            ranking_seven.addEventListener('click', function () {
+                window.open('https://search.naver.com/search.naver?where=nexearch&sm=top_hty&fbm=1&ie=utf8&query=' + `${data.rankings[6]}`)
+            });
             ranking_eight.innerText = `${data.rankings[7]}`;
+            ranking_eight.addEventListener('click', function () {
+                window.open('https://search.naver.com/search.naver?where=nexearch&sm=top_hty&fbm=1&ie=utf8&query=' + `${data.rankings[7]}`)
+            });
             ranking_nine.innerText = `${data.rankings[8]}`;
+            ranking_nine.addEventListener('click', function () {
+                window.open('https://search.naver.com/search.naver?where=nexearch&sm=top_hty&fbm=1&ie=utf8&query=' + `${data.rankings[8]}`)
+            });
             ranking_ten.innerText = `${data.rankings[9]}`;
+            ranking_ten.addEventListener('click', function () {
+                window.open('https://search.naver.com/search.naver?where=nexearch&sm=top_hty&fbm=1&ie=utf8&query=' + `${data.rankings[9]}`)
+            });
         }, 1000);
+
 
         // function clickToSearchTrend(trending_num) {
         //     window.open(`https://search.naver.com/search.naver?query=${data.rankings[trending_num]}`)
