@@ -9,16 +9,17 @@ const ranking_eight = document.getElementById("eight")
 const ranking_nine = document.getElementById("nine")
 const ranking_ten = document.getElementById("ten")
 
-const url = `http://127.0.0.1:8000`
+const url = `https://newface.deta.dev`
 console.log(url)
+
 
 fetch(url)
     .then((response) => response.json())
     .then((data) => {
         setInterval(() => {
-            for (let index = 0; index <= 9; index++) {
-                console.log((index + 1) + data.rankings[index])
-            }
+            // for (let index = 0; index <= 9; index++) {
+            //     console.log((index + 1) + data.rankings[index])
+            // }
             ranking_one.innerText = `${data.rankings[0]}`;
             ranking_two.innerText = `${data.rankings[1]}`;
             ranking_three.innerText = `${data.rankings[2]}`;
@@ -30,5 +31,10 @@ fetch(url)
             ranking_nine.innerText = `${data.rankings[8]}`;
             ranking_ten.innerText = `${data.rankings[9]}`;
         }, 1000);
-    });
 
+        // function clickToSearchTrend(trending_num) {
+        //     window.open(`https://search.naver.com/search.naver?query=${data.rankings[trending_num]}`)
+        //     console.log("발동")
+        // }
+        // ranking_two.addEventListener('click', clickToSearchTrend(1))
+    });

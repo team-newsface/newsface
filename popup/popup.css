@@ -12,6 +12,7 @@
     font-style: normal;
 }
 
+
 body {
     width: 320px;
     height: 600px;
@@ -41,6 +42,13 @@ header {
     height: 48px;
     margin-right: auto;
     margin-left: auto;
+}
+
+.offText {
+    display: none;
+    font-size: 20px;
+    margin-top: 70%;
+    text-align: center;
 }
 
 .hdCtn {
@@ -119,7 +127,9 @@ header {
     justify-content: center;
     font-size: 13px;
     margin-top: 3%;
+    padding-left: 11%;
 }
+
 
 ol>li:hover {
     background-color: #575757;
@@ -127,4 +137,5 @@ ol>li:hover {
 
 ol>li {
     margin-bottom: 5%;
+    cursor: text;
 }

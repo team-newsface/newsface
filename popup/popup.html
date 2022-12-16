@@ -20,35 +20,39 @@
                     </label>
             </div>
         </header>
-        <div class="mainCtn">
-            <div class="ctTitle">
-                <div class="ctTitleText">정치</div>
+        <p class="offText" id="offText">기능이 비활성화 되어있습니다<br>🤯
+        </p>
+        <div class="ctnContainer" id="ctnContainer">
+            <div class="mainCtn">
+                <div class="ctTitle">
+                    <div class="ctTitleText">정치</div>
+                </div>
+                <div class="chartContainer">
+                    <canvas id="ctChart"></canvas>
+                </div>
+                <div class="chartDesContainer">
+                    <ul class="eachPersChart">
+                        <li>70%</li>
+                        <li>25%</li>
+                        <li>5%</li>
+                    </ul>
+                    <div class="chartDes">70%의 여론이 긍정적이에요!</div>
+                </div>
             </div>
-            <div class="chartContainer">
-                <canvas id="ctChart"></canvas>
+            <div class="rankingsContainer">
+                <ol>
+                    <li id="one"></li>
+                    <li id="two"></li>
+                    <li id="three"></li>
+                    <li id="four"></li>
+                    <li id="five"></li>
+                    <li id="six"></li>
+                    <li id="seven"></li>
+                    <li id="eight"></li>
+                    <li id="nine"></li>
+                    <li id="ten"></li>
+                </ol>
             </div>
-            <div class="chartDesContainer">
-                <ul class="eachPersChart">
-                    <li>70%</li>
-                    <li>25%</li>
-                    <li>5%</li>
-                </ul>
-                <div class="chartDes">70%의 여론이 긍정적이에요!</div>
-            </div>
-        </div>
-        <div class="rankingsContainer">
-            <ol>
-                <li id="one"></li>
-                <li id="two"></li>
-                <li id="three"></li>
-                <li id="four"></li>
-                <li id="five"></li>
-                <li id="six"></li>
-                <li id="seven"></li>
-                <li id="eight"></li>
-                <li id="nine"></li>
-                <li id="ten"></li>
-            </ol>
         </div>
     </div>
     <script src="../scripts/rankingApi.js"></script>
